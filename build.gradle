@@ -19,6 +19,15 @@ dependencies {
 	// Add the two dependencies below
 	implementation 'org.springframework.data:spring-data-jdbc'
 	testImplementation 'com.h2database:h2'
+
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+}
+
+test {
+	testLogging {
+		// Set to `true` for more detailed logging.
+		showStandardStreams = true
+	}
 }
 
 tasks.named('test') {
