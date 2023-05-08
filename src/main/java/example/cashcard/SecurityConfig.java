@@ -36,12 +36,12 @@ public class SecurityConfig {
         UserDetails felipe = users
                 .username("felipe")
                 .password(passwordEncoder.encode("abc123"))
-                .roles("CARD-OWNER") // new role
+                .roles("CARD-OWNER")
                 .build();
         UserDetails hankOwnsNoCards = users
                 .username("hank-owns-no-cards")
                 .password(passwordEncoder.encode("qrs456"))
-                .roles("NON-OWNER") // new role
+                .roles("NON-OWNER")
                 .build();
         return new InMemoryUserDetailsManager(felipe, hankOwnsNoCards);
     }
